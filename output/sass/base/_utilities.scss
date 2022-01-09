@@ -1,0 +1,18 @@
+.u-margin-md {
+  margin-bottom: 7.5rem;
+  @include respond(small-screen) {
+    margin-bottom: 4rem;
+  }
+  @include respond(phone) {
+    margin-bottom: 2.4rem;
+  }
+}
+.u-margin-sm {
+  margin-bottom: 6.2rem;
+  @include respond(small-screen) {
+    margin-bottom: 4rem;
+  }
+  @include respond(phone) {
+    margin-bottom: 2.4rem;
+  }
+}

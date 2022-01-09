@@ -1,0 +1,45 @@
+.num__nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8rem;
+  @include respond(small-screen) {
+    flex-direction: row;
+    margin-right: 0;
+    justify-content: center;
+    margin-bottom: 5.7rem;
+  }
+}
+.num__btn {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba($color-primary, 0.25);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: $color-primary;
+  font-family: "Bellefair", serif;
+  cursor: pointer;
+
+  @include respond(small-screen) {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &:hover {
+    border: 1px solid rgba($color-primary, 1);
+  }
+  &:not(:last-child) {
+    margin-bottom: 3.2rem;
+    @include respond(small-screen) {
+      margin-bottom: 0;
+      margin-right: 1.6rem;
+    }
+  }
+
+  &--active {
+    background-color: $color-primary;
+    color: $color-black;
+  }
+}

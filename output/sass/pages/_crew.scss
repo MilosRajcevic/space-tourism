@@ -1,0 +1,59 @@
+.crew {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(small-screen) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include respond(phone) {
+    flex-direction: column-reverse;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60rem;
+
+    @include respond(small-screen) {
+      justify-content: center;
+      height: auto;
+    }
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__function {
+    color: rgba($color-grey, 0.5);
+  }
+
+  &__text {
+    max-width: 45rem;
+
+    @include respond(small-screen) {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img-box {
+    @include respond(phone) {
+      border-bottom: 1px solid rgba($color-black, 0.5);
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__img {
+    @include respond(small-screen) {
+      height: 53rem;
+    }
+
+    @include respond(phone) {
+      height: 23rem;
+      width: auto;
+    }
+  }
+}

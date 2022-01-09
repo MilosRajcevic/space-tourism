@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative; //position relative je zbog overflow-x jer u ovo slucaju nece da radi ovde bez toga? Zasto? Objasnjenje sveska!!!
+}
+
+.body-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 4rem);
+
+  @include respond(small-screen) {
+    height: 100vh;
+  }
+
+  &--1 {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+
+    @include respond(small-screen) {
+      background-image: url(../../assets/home/background-home-tablet.jpg);
+    }
+
+    @include respond(phone) {
+      background-image: url(../../assets/home/background-home-mobile.jpg);
+    }
+  }
+
+  &--2 {
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    @include respond(small-screen) {
+      background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    }
+    @include respond(phone) {
+      background-image: url(../../assets/destination/background-destination-mobile.jpg);
+    }
+  }
+
+  &--3 {
+    background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    @include respond(small-screen) {
+      background-image: url(../../assets/crew/background-crew-tablet.jpg);
+    }
+    @include respond(phone) {
+      background-image: url(../../assets/crew/background-crew-mobile.jpg);
+    }
+  }
+
+  &--4 {
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+    @include respond(small-screen) {
+      background-image: url(../../assets/technology/background-technology-tablet.jpg);
+    }
+    @include respond(phone) {
+      background-image: url(../../assets/technology/background-technology-mobile.jpg);
+    }
+  }
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 16.5rem;
+
+  @include respond(phone) {
+    padding: 0 2.4rem;
+  }
+}
+
+.container--1 {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 16.5rem;
+
+  @include respond(small-screen) {
+    padding: 0 10rem;
+  }
+  @include respond(phone) {
+    padding: 0 2.4rem;
+  }
+}
+
+// .container--2 {
+//   max-width: 144rem;
+//   margin: 0 auto;
+//   padding: 0 0 0 16.5rem;
+
+//   @include respond(small-screen) {
+//     padding: 0;
+//   }
+// }
