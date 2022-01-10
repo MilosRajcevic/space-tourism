@@ -1,0 +1,27 @@
+//small-screen 1100px
+//tab 768px
+//phone 600px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==small-screen {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mh {
+    @media only screen and (max-height: 48em) {
+      @content;
+    }
+  }
+}
